@@ -1,0 +1,42 @@
+
+	<form>
+	            <fieldset>
+	              <legend>Log In</legend>
+	              <div class="form-group">
+	                <label for="exampleInputEmail1">ID</label>
+	                <input class="form-control" id="id" name="id" type="text" placeholder="ID">
+	              </div>
+	              <div class="form-group">
+	                <label for="exampleInputPassword1">Password</label>
+	                <input class="form-control" id="password" name="password" type="password" placeholder="Password">
+	              </div>
+	              <div class="btn-group">
+	                <button class="btn btn-outline-secondary" type="submit" onclick="Logincheck(); return false;">로그인</button>
+	            	<a href="checkUser"><button class="btn btn-outline-secondary" type="button">회원가입</button></a>
+	              </div>
+	            </fieldset>
+	          </form>
+	        <br>
+	          <!-- 구글 로그인 -->
+	        <div id="my-signin2"></div>
+	        <br>
+	        <!-- 번역기 -->
+	         <legend>번역기</legend>
+	          <select class="form-control" id="lang1" name="lang1" class="dropdown-select">
+				  <option value="ko">한국어</option>
+			      <option value="en">English</option>
+			  </select>
+   			<textarea placeholder="번역할 내용을 입력하세요." class="form-control" rows="5" id="korea"></textarea><br>
+   			<select class="form-control" id="lang2" name="lang2" class="dropdown-select">
+			 		<option value="ko">한국어</option>
+					<option value="en" selected>English</option>
+			</select>
+   			<textarea readonly="readonly" class="form-control" rows="5" id="english"></textarea>
+	         <div class="btn-group">
+	         <input type="button" class="btn btn-outline-secondary" onclick="change();" value="switch">
+			<button   class="btn btn-outline-secondary" onclick="translatee();">번역</button><br>
+          	</div>
+
+	
+		
+	

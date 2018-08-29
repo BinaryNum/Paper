@@ -1,0 +1,44 @@
+#banner{
+  position: relative;
+  margin-bottom: 0;
+}
+#navigation{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+#content{
+  margin: 0;
+}
+
+#login{
+    background-color: #fff3cd;
+}
+
+#main{
+    padding: 0;
+
+    margin-left: 0;
+
+}
+
+#newDocument{
+    background-color: #9fcdff;
+
+}
+#board{
+  margin: 30px;
+
+}
+footer{
+
+    text-align : center;
+    background-color :slategrey;
+}
+.jumbotron {
+  text-align: center;
+}
+.table-bordered th, .table-bordered td{
+  height: 10%;
+}

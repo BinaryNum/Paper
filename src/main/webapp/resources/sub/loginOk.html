@@ -1,0 +1,35 @@
+
+<fieldset>
+	              <legend>환영합니다!</legend>
+	              <form action ="logout" method="post">
+	              <div class="btn-group">
+	              	<a href="mypage">
+	                	<button class="btn btn-outline-secondary" type="button">My Page</button>
+	            	</a>
+	            	<input class="btn btn-outline-secondary" type="submit" value="Logout">
+	              </div>
+	              </form>
+	            </fieldset>
+	            <br>
+	             <!-- 번역기 -->
+	         <legend>번역기</legend>
+	          <select class="form-control" id="lang1" name="lang1" class="dropdown-select">
+				  <option value="ko">한국어</option>
+			      <option value="en">English</option>
+			  </select>
+   			<textarea placeholder="번역할 내용을 입력하세요." class="form-control" rows="5" id="korea"></textarea><br>
+   			<select class="form-control" id="lang2" name="lang2" class="dropdown-select">
+			 		<option value="ko">한국어</option>
+					<option value="en" selected>English</option>
+			</select>
+   			<textarea readonly="readonly" class="form-control" rows="5" id="english"></textarea>
+	         <div class="btn-group">
+	         <input type="button" class="btn btn-outline-secondary" onclick="change();" value="switch">
+			<button   class="btn btn-outline-secondary" onclick="translatee();">번역</button><br>
+          	</div>
+
+
+
+</body>
+
+				
