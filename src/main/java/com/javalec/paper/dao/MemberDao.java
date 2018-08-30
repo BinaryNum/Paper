@@ -64,7 +64,7 @@ public class MemberDao {
 
   public Member exist(String id, String password) {
 	  String sql = null;
-	  Member m = null;
+	  Member m = new Member();
 	  if(password==null) {
 		  sql = "SELECT * FROM MEMBER WHERE ID= '" + id + "'";
 	  } else {
@@ -73,7 +73,7 @@ public class MemberDao {
 	  try {
 		  m = template.queryForObject(sql, new BeanPropertyRowMapper<Member>(Member.class));
 	  }catch(EmptyResultDataAccessException e) {
-		  return null;
+		  return m;
 	  }
 	  m.setInterested(m.getInterested());
 	  return m;

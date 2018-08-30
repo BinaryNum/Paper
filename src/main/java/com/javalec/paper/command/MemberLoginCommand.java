@@ -35,6 +35,9 @@ public class MemberLoginCommand implements Command {
 	         try {
 	            vo=dao.exist(id,password);
 	            System.out.println(vo.getInterested()+"!!!!!!!!");
+	           /* if(vo.getInterested() == null) {
+	            	vo.setInterested("IT");
+	            }*/
 	            if(vo.getInterested()==null) {
 	                JSONObject obj=new JSONObject();
 	                obj.put("idcheck", flag);

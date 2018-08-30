@@ -35,7 +35,7 @@ function onSuccess(googleUser) {
     var id=googleUser.getBasicProfile().getEmail();
     $.ajax({
        type:"post",
-       url:"Logincheck.do",
+       url:"Logincheck",
        data:{id:id},
        dataType:"json",
        success:function(data){
@@ -47,7 +47,7 @@ function onSuccess(googleUser) {
        }
        else{
           
-          location.href="index.jsp";
+          location.href="index";
        }
           
        
@@ -102,7 +102,7 @@ $(document).ready( function() {
 	 $("#interestbutton").click(function(){
 	        var interested=$("#interested option:selected").val();
 	         var id=$("#hide").val();
-	        location.href="signup.do?id="+id+"&interested="+interested;
+	        location.href="signup?id="+id+"&interested="+interested;
 	        
 	        
 	     });
@@ -116,7 +116,7 @@ $(document).ready( function() {
 		        source : function( request, response ) {
 		             $.ajax({
 		                    type:"post",
-		                    url:"Auto.do",
+		                    url:"Auto",
 		                    dataType:"json",
 		                    //request.term = $("#autocomplete").val()
 		                    data: {keyword:request.term},
@@ -157,14 +157,14 @@ function Logincheck(){
 	
 	$.ajax({
 		type:"post",
-		url:"Logincheck.do",
+		url:"Logincheck",
 		data:{id:id,password:password},
 		dataType:"json",
 		success:function(data){
 		if(data.idcheck==1){
 			
 			alert("로그인에 성공 하였습니다!");
-			location.href="index.do";
+			location.href="index";
 		}
 		else{
 			alert("아이디 또는 비밀번호를 확인하여 주십시오");
@@ -187,7 +187,7 @@ function doublecheck(){
 		
 		$.ajax({
 			type:"post",
-			url:"doublecheck.do",
+			url:"doublecheck",
 			data:{id:id},
 			dataType:"json",
 			success:function(data){
@@ -268,7 +268,7 @@ function translatee(){
 	
 	$.ajax({
 		type:"post",
-		url:"translate.do",
+		url:"translate",
 		data:{lang1:lang1,lang2:lang2,sentence:sentence},
 		dataType:"json",
 		success:function(data){
